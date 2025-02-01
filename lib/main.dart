@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:pbooks/utilities/utils.dart';
+
+import 'views/splashscreen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,20 +15,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'PBooks',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
-      home: const MyHomePage(),
+      theme: mainTheme,
+      debugShowCheckedModeBanner: false,
+      home: SplashScreen(),
     );
-  }
-}
-
-class MyHomePage extends StatelessWidget {
-  const MyHomePage({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const Placeholder();
   }
 }

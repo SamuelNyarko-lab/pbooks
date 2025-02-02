@@ -10,7 +10,7 @@ class HeaderLogo extends StatelessWidget {
         width: 100,
         height: 50,
         child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Image(

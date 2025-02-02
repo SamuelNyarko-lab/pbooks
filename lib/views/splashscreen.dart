@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pbooks/utilities/helpers.dart';
-import 'package:pbooks/utilities/utils.dart';
+import 'package:pbooks/views/firstscreen.dart';
+import 'package:pbooks/widgets/button.dart';
 import 'package:pbooks/widgets/headerlogo.dart';
 
 class SplashScreen extends StatelessWidget {
@@ -12,7 +13,7 @@ class SplashScreen extends StatelessWidget {
       body: Stack(
         children: [
           Image.asset(
-            'assets/images/splashbg.jpg',
+            'assets/images/moana1.jpg',
             fit: BoxFit.fill,
             width: double.infinity,
             height: double.infinity,
@@ -66,18 +67,16 @@ class SplashScreen extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      MaterialButton(
-                        onPressed: () {},
-                        color: mainButtonColor,
-                        minWidth: deviceWidth(context) * 0.8,
-                        child: Text(
-                          "Get Started",
-                          style: TextStyle(
-                            fontSize: 20,
-                            fontWeight: FontWeight.w700,
-                          ),
-                        ),
-                      ),
+                      MainButton(
+                          action: () {
+                            Navigator.pushReplacement(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => FirstScreen(),
+                              ),
+                            );
+                          },
+                          buttonText: 'Get Started'),
                       verticalSpace(20),
                       Text.rich(
                         TextSpan(

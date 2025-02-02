@@ -69,7 +69,7 @@ class SplashScreen extends StatelessWidget {
                     children: [
                       MainButton(
                           action: () {
-                            Navigator.pushReplacement(
+                            Navigator.push(
                               context,
                               MaterialPageRoute(
                                 builder: (context) => FirstScreen(),

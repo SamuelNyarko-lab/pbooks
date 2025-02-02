@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pbooks/utilities/helpers.dart';
 import 'package:pbooks/utilities/utils.dart';
+import 'package:pbooks/views/secondscreen.dart';
 import 'package:pbooks/widgets/button.dart';
 import 'package:pbooks/widgets/headerlogo.dart';
 import 'package:pbooks/widgets/pagewithbg.dart';
@@ -15,19 +16,11 @@ class FirstScreen extends StatelessWidget {
       opacity: 0.01,
       child: Scaffold(
         appBar: AppBar(
-          
-          leading: Align(
-                alignment: Alignment.centerLeft,
-
-            child: Padding(
-              padding: const EdgeInsets.only(left: 5), // Adds space to the left
-              child: CircularButton(
-                iconData: Icons.arrow_back,
-                onPressed: () {},
-              ),
-            ),
+          leading: CircularButton(
+            iconData: Icons.arrow_back,
+            onPressed: () {},
           ),
-          leadingWidth: 50,
+          leadingWidth: 100,
           actions: [
             Padding(
               padding: const EdgeInsets.all(8.0),
@@ -54,7 +47,7 @@ class FirstScreen extends StatelessWidget {
                       color: Colors.white,
                     ),
                   ),
-                  verticalSpace(20),
+                  verticalSpace(50),
                   SizedBox(
                     width: deviceWidth(context) * 0.9,
                     child: TextField(
@@ -79,10 +72,10 @@ class FirstScreen extends StatelessWidget {
               verticalSpace(20),
               MainButton(
                   action: () {
-                    Navigator.pushReplacement(
+                    Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => FirstScreen(),
+                        builder: (context) => SecondScreen(),
                       ),
                     );
                   },

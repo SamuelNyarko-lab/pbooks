@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:pbooks/utilities/utils.dart';
-import 'package:pbooks/views/firstscreen.dart';
 import 'package:pbooks/views/splashscreen.dart';
 
 
@@ -18,7 +17,7 @@ class MyApp extends StatelessWidget {
       title: 'PBooks',
       theme: mainTheme,
       debugShowCheckedModeBanner: false,
-      home: FirstScreen(),
+      home: SplashScreen(),
     );
   }
 }

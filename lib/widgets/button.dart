@@ -32,20 +32,16 @@ class CircularButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: onPressed,
-      child: Container(
-        height: 50,
-        width: 50,
-        decoration: BoxDecoration(
-          shape: BoxShape.circle,
-          color: mainButtonColor, // Neon green color
-        ),
-        child: Icon(
-          iconData,
-          color: Colors.black,
-          size: 35,
-        ),
+    return MaterialButton(
+      onPressed: onPressed,
+      shape: CircleBorder(),
+      minWidth: 40,
+      height: 40,
+      color: mainButtonColor,
+      child: Icon(
+        iconData,
+        color: Colors.black,
+        size: 40,
       ),
     );
   }

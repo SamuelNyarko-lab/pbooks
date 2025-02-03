@@ -62,6 +62,15 @@ class SecondScreen extends StatelessWidget {
             ],
           ),
         ),
+        bottomSheet: BottomSheet(onClosing: (){}, builder: (context)=> Container(
+                  height: deviceHeight(context) * 0.5,
+                  decoration: BoxDecoration(
+                      color: Colors.white.withAlpha(20),
+                      borderRadius: BorderRadius.horizontal(
+                        left: Radius.circular(40),
+                        right: Radius.circular(40),
+                      )),
+                ), ),
       ),
     );
   }

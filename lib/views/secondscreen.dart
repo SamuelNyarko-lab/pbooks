@@ -1,4 +1,4 @@
-// ignore_for_file: must_be_immutable
+// ignore_for_file: must_be_immutable, deprecated_member_use
 
 import 'package:flutter/material.dart';
 import 'package:pbooks/views/thirdscreen.dart';
@@ -120,7 +120,7 @@ class SecondScreen extends StatelessWidget {
                                           // Selection Overlay Box (Only visible when selected)
                                           if (isSelected)
                                             Container(
-                                              height: 60,
+                                              height: 55,
                                               width: deviceWidth(context) *0.7,
                                               decoration: BoxDecoration(
                                                 color: Colors.white
@@ -136,8 +136,9 @@ class SecondScreen extends StatelessWidget {
                                               '${ages[index]} yrs',
                                               textAlign: TextAlign.center,
                                               style: TextStyle(
-                                                fontSize: isSelected ? 30 : 28,
-                                                fontWeight:isSelected ?FontWeight.bold : FontWeight.w500,
+                                                fontSize: isSelected ? 27 : 25,
+                                                fontWeight:isSelected ? FontWeight.w500
+                                                    : FontWeight.w400,
                                                 color: Colors.white.withOpacity(
                                                     isSelected ? 1 : 0.5),
                                               ),

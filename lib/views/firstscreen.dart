@@ -18,7 +18,9 @@ class FirstScreen extends StatelessWidget {
         appBar: AppBar(
           leading: CircularButton(
             iconData: Icons.arrow_back,
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pop(context);
+            },
           ),
           leadingWidth: 100,
           actions: [
